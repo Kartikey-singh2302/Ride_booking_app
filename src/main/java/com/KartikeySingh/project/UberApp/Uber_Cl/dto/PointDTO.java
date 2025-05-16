@@ -13,4 +13,18 @@ public class PointDTO {
     {
         this.coordinates=coordinates;
     }
+
+    public String getX() {
+        return null;
+    }
+
+
+    public String getY() {
+    return null;
+    }
+
+    //temporary-->
+
+
+
 }

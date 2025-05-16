@@ -1,5 +1,6 @@
 package com.KartikeySingh.project.UberApp.Uber_Cl.Strategies.impl;
 
+import com.KartikeySingh.project.UberApp.Uber_Cl.Strategies.DriverMatchingStrategy;
 import com.KartikeySingh.project.UberApp.Uber_Cl.Strategies.RideFareCalculationStrategy;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
@@ -16,7 +17,7 @@ public class RideStrategyManager {
     private final RiderFareDefaultFareCalculationStrategy defaultFareCalculationStrategy;
 
 
-    public Object driverMatchingStrategy(double riderRating){
+    public DriverMatchingStrategy driverMatchingStrategy(double riderRating){
 
         if(riderRating>=4.8)
         {
@@ -30,7 +31,7 @@ public class RideStrategyManager {
     }
     public RideFareCalculationStrategy rideFareCalculationStrategy() {
 
-        //6pm to 9pm
+        //6pm to 9pm is SURGE PRICING TIME
         LocalTime surgeStartTime = LocalTime.of(18,0);
         LocalTime surgeEndTime = LocalTime.of(21,0);
         LocalTime currentTime =LocalTime.now();

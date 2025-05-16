@@ -1,10 +1,11 @@
 package com.KartikeySingh.project.UberApp.Uber_Cl.configs;
+
 import com.KartikeySingh.project.UberApp.Uber_Cl.dto.PointDTO;
 import com.KartikeySingh.project.UberApp.Uber_Cl.utils.GeometryUtil;
 import org.locationtech.jts.geom.Point;
+import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.modelmapper.ModelMapper;
 @Configuration
 
 public class MapperConfig {

@@ -2,19 +2,20 @@ package com.KartikeySingh.project.UberApp.Uber_Cl.Entities;
 
 import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.enums.PaymentMethod;
 import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.enums.RideRequestStatus;
-import com.KartikeySingh.project.UberApp.Uber_Cl.dto.PointDTO;
 import jakarta.persistence.*;
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
-import org.locationtech.jts.geom.Point;
 
-import javax.print.DocFlavor;
+import java.awt.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Getter
-@Setter
+@Data
+@Table(indexes = {
+        @Index(name = "idx_ride_request_rider", columnList = "rider_id")
+})
 public class RideRequest {
     @Id
 
@@ -22,10 +23,10 @@ public class RideRequest {
     private Long id;
 
     @Column(columnDefinition="Geometry(Point,4326)")
-    private PointDTO pickupLocation;
+    private Point pickupLocation;
 
     @Column(columnDefinition = "Geometry(Point,4326)")
-    private PointDTO dropOffLocation;
+    private Point dropOffLocation;
 
     @CreationTimestamp
     private LocalDateTime requestedTime;

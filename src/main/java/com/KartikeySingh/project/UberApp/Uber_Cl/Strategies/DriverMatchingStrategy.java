@@ -6,7 +6,9 @@ import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.RideRequest;
 import java.util.List;
 
 public interface DriverMatchingStrategy {
-    static List<Driver> findMatchingDriver(RideRequest rideRequest) {
-        return null;
-    }
+      List<Driver> findMatchingDriver(RideRequest rideRequest);
+
+
+
+
 }

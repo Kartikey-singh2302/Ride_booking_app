@@ -1,13 +1,17 @@
 package com.KartikeySingh.project.UberApp.Uber_Cl.Entities;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 import org.locationtech.jts.geom.Point;
 
 @Entity
-@Getter
-@Setter
+@Builder
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Table(indexes = {
+        @Index( name = "idx_driver_vehicle_id", columnList = "vehicleId")
+})
 public class Driver {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,5 +27,4 @@ public class Driver {
 
     @Column(columnDefinition = "Geometry(Point,4326)")
     Point currentLocation;  //--->Spring Boot me Point ka use latitude aur longitude (GPS location) store karne ke liye hota hai. Agar aap kisi driver, delivery agent, ya kisi user ka current location store karna chahte ho, to Point type ka use kar sakte ho.
-    
 }

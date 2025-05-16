@@ -1,8 +1,6 @@
 package com.KartikeySingh.project.UberApp.Uber_Cl.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Data
 @NoArgsConstructor
@@ -10,6 +8,8 @@ import lombok.NoArgsConstructor;
 public class SignupDTO
 {
     private String name;
-    private String email;
+    private String Email;
     private String password;
+    private String Roles;
+
 }

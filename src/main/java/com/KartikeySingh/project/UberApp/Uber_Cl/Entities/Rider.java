@@ -4,9 +4,8 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Getter
-@Setter
 @Builder
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class Rider {
@@ -17,5 +16,4 @@ public class Rider {
     @JoinColumn(name="user_id")
     private User user;
   private Double rating;
-
 }

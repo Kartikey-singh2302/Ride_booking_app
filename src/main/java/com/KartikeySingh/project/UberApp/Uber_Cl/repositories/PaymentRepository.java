@@ -1,0 +1,13 @@
+package com.KartikeySingh.project.UberApp.Uber_Cl.repositories;
+
+import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.Payment;
+import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.Ride;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.Optional;
+
+@Repository
+public interface PaymentRepository extends JpaRepository<Payment,Long> {
+    Optional<Payment> findByRide(Ride ride);
+}

@@ -1,23 +1,31 @@
 package com.KartikeySingh.project.UberApp.Uber_Cl.Entities;
 
 import jakarta.persistence.*;
-import org.apache.logging.log4j.util.Lazy;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
+
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
+@Data
+@Table(indexes = {
+        @Index(name = "idx_wallet_transaction_wallet", columnList = "wallet_id"),
+        @Index(name = "idx_wallet_transaction_ride", columnList = "ride_id")
+
+})
 public class Wallet {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToOne(fetch = FetchType.LAZY)
-
+    @OneToOne(fetch = FetchType.LAZY,optional = false, cascade = CascadeType.DETACH)
         private User user;
-        private Double balance;
+
+        private Double balance=0.0;
     @OneToMany(mappedBy="wallet",fetch = FetchType.LAZY)
     private List<WalletTransaction> transaction;
-
-
-
 }

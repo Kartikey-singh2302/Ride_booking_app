@@ -5,7 +5,9 @@ import com.KartikeySingh.project.UberApp.Uber_Cl.dto.SignupDTO;
 import com.KartikeySingh.project.UberApp.Uber_Cl.dto.UserDTO;
 
 public interface AuthService {
-    String  login(String email,String password);
+    String[]  login(String email,String password);
      UserDTO signup(SignupDTO signupdto);
-     DriverDTO onboardNewDriver(Long userId);
+     DriverDTO onboardNewDriver(Long userId, String vehicleId);
+
+    String refreshToken(String refreshToken);
 }
