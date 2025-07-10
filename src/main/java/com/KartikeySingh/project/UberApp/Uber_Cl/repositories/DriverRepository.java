@@ -11,9 +11,6 @@ import java.awt.*;
 import java.util.List;
 import java.util.Optional;
 
-//ST_Distance(point1, point2)
-//ST_DWithin(point1 ,10000)---> this is distance within
-//custom queries likhi hai
 @Repository
 public interface DriverRepository extends JpaRepository<Driver,Long> {
 
