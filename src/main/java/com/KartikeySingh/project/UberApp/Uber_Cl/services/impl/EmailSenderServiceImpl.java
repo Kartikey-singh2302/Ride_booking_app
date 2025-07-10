@@ -31,7 +31,7 @@ public class EmailSenderServiceImpl implements EmailSenderService {
 
     }
 
-    @Override// ye wala mutiple email at once send k liye h
+    @Override
     public void sendEmail(String[] toEmail, String subject, String body) {
         try{
             SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
