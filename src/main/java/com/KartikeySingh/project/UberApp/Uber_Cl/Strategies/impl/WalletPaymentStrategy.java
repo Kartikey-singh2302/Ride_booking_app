@@ -13,11 +13,6 @@ import com.KartikeySingh.project.UberApp.Uber_Cl.services.WalletService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-//rider has 232rs ,driver has 500
-//ride cost rs=100 ,commission is 30rs
-//rider->232-100=132
-//driver -> 500+(100-30)=570
-
 @Service
 @RequiredArgsConstructor
 public class WalletPaymentStrategy implements PaymentStrategy {
