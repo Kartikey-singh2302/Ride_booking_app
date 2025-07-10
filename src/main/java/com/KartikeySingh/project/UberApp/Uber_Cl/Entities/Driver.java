@@ -17,7 +17,7 @@ public class Driver {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @OneToOne
-    @JoinColumn(name="user_id") //--->The @JoinColumn annotation in JPA (Java Persistence API) is used to specify the foreign key column when defining a relationship between two entities in a relational database. It is commonly used with @OneToOne, @ManyToOne, and @OneToMany associations.
+    @JoinColumn(name="user_id")
     private User user;
     private Double rating;
 
