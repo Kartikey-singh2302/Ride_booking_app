@@ -22,9 +22,4 @@ public class PointDTO {
     public String getY() {
     return null;
     }
-
-    //temporary-->
-
-
-
 }
