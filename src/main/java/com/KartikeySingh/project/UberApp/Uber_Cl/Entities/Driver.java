@@ -26,5 +26,5 @@ public class Driver {
     private String vehicleId;
 
     @Column(columnDefinition = "Geometry(Point,4326)")
-    Point currentLocation;  //--->Spring Boot me Point ka use latitude aur longitude (GPS location) store karne ke liye hota hai. Agar aap kisi driver, delivery agent, ya kisi user ka current location store karna chahte ho, to Point type ka use kar sakte ho.
+    Point currentLocation;
 }
