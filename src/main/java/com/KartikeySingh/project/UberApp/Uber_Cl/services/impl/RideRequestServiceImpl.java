@@ -1,6 +1,6 @@
 package com.KartikeySingh.project.UberApp.Uber_Cl.services.impl;
 
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.RideRequest;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.RideRequest;
 import com.KartikeySingh.project.UberApp.Uber_Cl.exceptions.ResourceNotFoundException;
 import com.KartikeySingh.project.UberApp.Uber_Cl.repositories.RideRequestRepository;
 import com.KartikeySingh.project.UberApp.Uber_Cl.services.RideRequestService;

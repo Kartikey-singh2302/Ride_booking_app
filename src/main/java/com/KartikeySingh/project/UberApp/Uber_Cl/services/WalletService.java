@@ -1,9 +1,9 @@
 package com.KartikeySingh.project.UberApp.Uber_Cl.services;
 
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.Ride;
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.User;
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.Wallet;
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.enums.TransactionMethod;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.Ride;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.User;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.Wallet;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.enums.TransactionMethod;
 
 public interface WalletService {
 

@@ -1,6 +1,6 @@
 package com.KartikeySingh.project.UberApp.Uber_Cl.configs;
 
-import com.KartikeySingh.project.UberApp.Uber_Cl.Security.JWTAuthFilter;
+import com.KartikeySingh.project.UberApp.Uber_Cl.security.JWTAuthFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -19,8 +19,7 @@ public class WebSecurityConfig {
 
     private final JWTAuthFilter jwtAuthFilter;
     public static final String[] PUBLIC_ROUTES= {"/auth/**"};
-
-    @Bean
+     @Bean
     SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception{
         httpSecurity
                 .sessionManagement(sessionConfig->sessionConfig

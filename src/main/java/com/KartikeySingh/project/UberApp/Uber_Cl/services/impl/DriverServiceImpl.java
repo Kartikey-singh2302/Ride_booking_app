@@ -1,11 +1,11 @@
 package com.KartikeySingh.project.UberApp.Uber_Cl.services.impl;
 
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.Driver;
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.Ride;
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.RideRequest;
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.User;
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.enums.RideRequestStatus;
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.enums.RideStatus;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.Driver;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.Ride;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.RideRequest;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.User;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.enums.RideRequestStatus;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.enums.RideStatus;
 import com.KartikeySingh.project.UberApp.Uber_Cl.dto.DriverDTO;
 import com.KartikeySingh.project.UberApp.Uber_Cl.dto.RideDTO;
 import com.KartikeySingh.project.UberApp.Uber_Cl.dto.RiderDTO;
@@ -21,7 +21,6 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
 @Service
 @RequiredArgsConstructor

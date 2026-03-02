@@ -1,7 +1,6 @@
 package com.KartikeySingh.project.UberApp.Uber_Cl.services.impl;
 
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.WalletTransaction;
-import com.KartikeySingh.project.UberApp.Uber_Cl.dto.WalletTransactionDTO;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.WalletTransaction;
 import com.KartikeySingh.project.UberApp.Uber_Cl.repositories.WalletTransactionRepository;
 import com.KartikeySingh.project.UberApp.Uber_Cl.services.WalletTransactionService;
 import lombok.RequiredArgsConstructor;

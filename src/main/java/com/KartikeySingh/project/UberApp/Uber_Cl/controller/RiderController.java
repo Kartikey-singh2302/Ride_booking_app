@@ -49,9 +49,7 @@ public class RiderController {
         PageRequest pageRequest = PageRequest.of(pageOffSet, pageSize);
         return ResponseEntity.ok(riderService.getAllMyRides(pageRequest));
 
-        //****👆 ye iska explaination h
-        // ye line ek successful HTTP response(200ok) return kregi jisme  body data me paginated data hoga
-        // jo riderService.getAllMyRides(pageRequest) se aya hoga
+
     }
 
     @PostMapping("/rateDriver/{rideId}/{rating}")

@@ -1,7 +1,7 @@
-package com.KartikeySingh.project.UberApp.Uber_Cl.Strategies.impl;
+package com.KartikeySingh.project.UberApp.Uber_Cl.strategies.impl;
 
-import com.KartikeySingh.project.UberApp.Uber_Cl.Strategies.DriverMatchingStrategy;
-import com.KartikeySingh.project.UberApp.Uber_Cl.Strategies.RideFareCalculationStrategy;
+import com.KartikeySingh.project.UberApp.Uber_Cl.strategies.DriverMatchingStrategy;
+import com.KartikeySingh.project.UberApp.Uber_Cl.strategies.RideFareCalculationStrategy;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
@@ -10,9 +10,8 @@ import java.time.LocalTime;
 @RequiredArgsConstructor
 @Component
 public class RideStrategyManager {
-
-    private final DriverMatchingHighestRatedDriverStrategy highestRatedDriverStrategy;
     private final DriverMatchingNearestDriverStrategy nearestDriverStrategy;
+    private final DriverMatchingHighestRatedDriverStrategy highestRatedDriverStrategy;
     private final RideFareSurgePricingFareCalculationStrategy surgePricingFareCalculationStrategy;
     private final RiderFareDefaultFareCalculationStrategy defaultFareCalculationStrategy;
 

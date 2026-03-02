@@ -1,8 +1,8 @@
 package com.KartikeySingh.project.UberApp.Uber_Cl.services;
 
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.Payment;
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.Ride;
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.enums.PaymentStatus;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.Payment;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.Ride;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.enums.PaymentStatus;
 
 public interface PaymentService {
 

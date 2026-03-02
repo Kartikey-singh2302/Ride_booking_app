@@ -1,10 +1,10 @@
 package com.KartikeySingh.project.UberApp.Uber_Cl.services.impl;
 
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.*;
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.enums.RideRequestStatus;
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.enums.RideStatus;
-import com.KartikeySingh.project.UberApp.Uber_Cl.Strategies.DriverMatchingStrategy;
-import com.KartikeySingh.project.UberApp.Uber_Cl.Strategies.impl.RideStrategyManager;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.*;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.enums.RideRequestStatus;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.enums.RideStatus;
+import com.KartikeySingh.project.UberApp.Uber_Cl.strategies.DriverMatchingStrategy;
+import com.KartikeySingh.project.UberApp.Uber_Cl.strategies.impl.RideStrategyManager;
 import com.KartikeySingh.project.UberApp.Uber_Cl.dto.DriverDTO;
 import com.KartikeySingh.project.UberApp.Uber_Cl.dto.RideDTO;
 import com.KartikeySingh.project.UberApp.Uber_Cl.dto.RideRequestDTO;
@@ -36,12 +36,9 @@ public class RiderServiceImpl implements RiderService {
 
         private final ModelMapper modelMapper;
         private final RideStrategyManager rideStrategyManager;
-        private final DriverMatchingStrategy driverMatchingStrategy;
         private final RideRequestRepository rideRequestRepository;
         private final RiderRepository  riderRepository;
-        private final RiderService riderService;
         private final RideService rideService;
-        private final DriverRepository driverRepository;
         private final DriverService driverService;
         private final RatingService ratingService;
 
@@ -66,7 +63,7 @@ public class RiderServiceImpl implements RiderService {
         @Override
         public RideDTO cancelRide(Long rideId) {
             Rider rider = getCurrentRider();
-            Ride ride = riderService.getRideById(rideId);
+            Ride ride = rideService.getRideById(rideId);
 
             if(!rider.equals(ride.getRider()))
             {
@@ -86,7 +83,7 @@ public class RiderServiceImpl implements RiderService {
 
     @Override
     public DriverDTO rateDriver(Long rideId, Integer rating) {
-          Ride ride = riderService.getRideById(rideId);
+          Ride ride = rideService.getRideById(rideId);
         Rider rider = getCurrentRider();
 
         if(!rider.equals(ride.getRider()))

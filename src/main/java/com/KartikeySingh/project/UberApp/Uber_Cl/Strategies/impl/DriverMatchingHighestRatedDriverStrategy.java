@@ -1,8 +1,8 @@
-package com.KartikeySingh.project.UberApp.Uber_Cl.Strategies.impl;
+package com.KartikeySingh.project.UberApp.Uber_Cl.strategies.impl;
 
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.Driver;
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.RideRequest;
-import com.KartikeySingh.project.UberApp.Uber_Cl.Strategies.DriverMatchingStrategy;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.Driver;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.RideRequest;
+import com.KartikeySingh.project.UberApp.Uber_Cl.strategies.DriverMatchingStrategy;
 import com.KartikeySingh.project.UberApp.Uber_Cl.repositories.DriverRepository;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;

@@ -1,6 +1,6 @@
-package com.KartikeySingh.project.UberApp.Uber_Cl.Security;
+package com.KartikeySingh.project.UberApp.Uber_Cl.security;
 import org.springframework.beans.factory.annotation.Value;
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.User;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.User;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
@@ -28,7 +28,7 @@ public class JWTService {
                 .issuedAt(new Date())
                 .expiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60 * 10)) // 10 hours
                 .signWith(getSecretKey())
-                .compact();
+                .compact(); // object ko jwt string me convert kr deta h
     }
 
     public String generateRefreshToken(User user) {

@@ -1,6 +1,6 @@
-package com.KartikeySingh.project.UberApp.Uber_Cl.Entities;
+package com.KartikeySingh.project.UberApp.Uber_Cl.entities;
 
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.enums.Role;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.enums.Role;
 import jakarta.persistence.*;
 import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;

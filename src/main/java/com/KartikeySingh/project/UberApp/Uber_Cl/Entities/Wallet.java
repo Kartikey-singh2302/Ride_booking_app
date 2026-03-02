@@ -1,10 +1,11 @@
-package com.KartikeySingh.project.UberApp.Uber_Cl.Entities;
+package com.KartikeySingh.project.UberApp.Uber_Cl.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
 import java.util.List;
 
 
@@ -12,12 +13,7 @@ import java.util.List;
 @AllArgsConstructor
 @Entity
 @Data
-@Table(indexes = {
-        @Index(name = "idx_wallet_transaction_wallet", columnList = "wallet_id"),
-        @Index(name = "idx_wallet_transaction_ride", columnList = "ride_id")
-
-})
-public class Wallet {
+public class Wallet implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

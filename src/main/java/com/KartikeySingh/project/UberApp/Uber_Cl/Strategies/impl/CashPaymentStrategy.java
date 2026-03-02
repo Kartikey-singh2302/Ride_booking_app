@@ -1,13 +1,12 @@
-package com.KartikeySingh.project.UberApp.Uber_Cl.Strategies.impl;
+package com.KartikeySingh.project.UberApp.Uber_Cl.strategies.impl;
 
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.Driver;
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.Payment;
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.Wallet;
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.enums.PaymentStatus;
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.enums.TransactionMethod;
-import com.KartikeySingh.project.UberApp.Uber_Cl.Strategies.PaymentStrategy;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.Driver;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.Payment;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.Wallet;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.enums.PaymentStatus;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.enums.TransactionMethod;
+import com.KartikeySingh.project.UberApp.Uber_Cl.strategies.PaymentStrategy;
 import com.KartikeySingh.project.UberApp.Uber_Cl.repositories.PaymentRepository;
-import com.KartikeySingh.project.UberApp.Uber_Cl.services.PaymentService;
 import com.KartikeySingh.project.UberApp.Uber_Cl.services.WalletService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -23,7 +22,6 @@ private final PaymentRepository paymentRepository;
     @Override
     public void processPayment(Payment payment) {
         Driver driver =payment.getRide().getDriver();
-
         Wallet driverWallet=walletService.findByUser(driver.getUser());
         double platformCommission = payment.getAmount()*PLATFORM_COMMISSION;
 
@@ -34,8 +32,6 @@ private final PaymentRepository paymentRepository;
         paymentRepository.save(payment);
     }
 }
-
-
 //10 rating count =4.0
 //new rating 4.6
 //new rating 4.6/11=4.05

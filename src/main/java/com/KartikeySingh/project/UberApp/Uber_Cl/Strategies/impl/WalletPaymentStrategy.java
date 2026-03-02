@@ -1,14 +1,13 @@
-package com.KartikeySingh.project.UberApp.Uber_Cl.Strategies.impl;
+package com.KartikeySingh.project.UberApp.Uber_Cl.strategies.impl;
 
 
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.Driver;
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.Payment;
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.Rider;
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.enums.PaymentStatus;
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.enums.TransactionMethod;
-import com.KartikeySingh.project.UberApp.Uber_Cl.Strategies.PaymentStrategy;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.Driver;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.Payment;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.Rider;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.enums.PaymentStatus;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.enums.TransactionMethod;
+import com.KartikeySingh.project.UberApp.Uber_Cl.strategies.PaymentStrategy;
 import com.KartikeySingh.project.UberApp.Uber_Cl.repositories.PaymentRepository;
-import com.KartikeySingh.project.UberApp.Uber_Cl.services.PaymentService;
 import com.KartikeySingh.project.UberApp.Uber_Cl.services.WalletService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

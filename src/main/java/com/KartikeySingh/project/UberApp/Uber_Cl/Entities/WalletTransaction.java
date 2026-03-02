@@ -1,7 +1,7 @@
-package com.KartikeySingh.project.UberApp.Uber_Cl.Entities;
+package com.KartikeySingh.project.UberApp.Uber_Cl.entities;
 
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.enums.TransactionMethod;
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.enums.TransactionType;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.enums.TransactionMethod;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.enums.TransactionType;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,6 +9,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 @NoArgsConstructor
@@ -16,7 +17,7 @@ import java.time.LocalDateTime;
 @Entity
 @Data
 @Builder
-public class WalletTransaction {
+public class WalletTransaction implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

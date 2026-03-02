@@ -1,4 +1,4 @@
-package com.KartikeySingh.project.UberApp.Uber_Cl.Entities.enums;
+package com.KartikeySingh.project.UberApp.Uber_Cl.entities.enums;
 
 public enum PaymentMethod {
     CASH,WALLET

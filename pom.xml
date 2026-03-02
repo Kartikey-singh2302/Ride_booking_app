@@ -46,21 +46,25 @@
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
-			<scope>runtime</scope>
+			<scope>compile</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>1.18.30</version> <!-- Use the latest version -->
+			<version>1.18.30</version>
 			<scope>compile</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>org.hibernate.orm</groupId>
 			<artifactId>hibernate-spatial</artifactId>
-			<version>6.5.2.Final</version>
-			<type>pom</type>
+			<version>6.6.11.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>net.postgis</groupId>
+			<artifactId>postgis-jdbc</artifactId>
+			<version>2021.1.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.modelmapper</groupId>

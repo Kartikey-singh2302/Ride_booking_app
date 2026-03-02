@@ -1,21 +1,16 @@
 package com.KartikeySingh.project.UberApp.Uber_Cl.controller;
 
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.User;
 import com.KartikeySingh.project.UberApp.Uber_Cl.dto.*;
 import com.KartikeySingh.project.UberApp.Uber_Cl.services.AuthService;
 import jakarta.servlet.http.Cookie;
-import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.security.authentication.AuthenticationServiceException;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.context.support.HttpRequestHandlerServlet;
 
 import java.util.Arrays;
 

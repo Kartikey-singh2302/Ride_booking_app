@@ -1,9 +1,8 @@
 package com.KartikeySingh.project.UberApp.Uber_Cl.dto;
 
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.enums.PaymentMethod;
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.enums.RideRequestStatus;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.enums.PaymentMethod;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.enums.RideRequestStatus;
 import lombok.Data;
-import org.locationtech.jts.geom.Point;
 
 import java.time.LocalDateTime;
 @Data

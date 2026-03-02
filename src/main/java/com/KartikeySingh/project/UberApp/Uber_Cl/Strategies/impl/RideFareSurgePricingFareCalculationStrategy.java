@@ -1,7 +1,7 @@
-package com.KartikeySingh.project.UberApp.Uber_Cl.Strategies.impl;
+package com.KartikeySingh.project.UberApp.Uber_Cl.strategies.impl;
 
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.RideRequest;
-import com.KartikeySingh.project.UberApp.Uber_Cl.Strategies.RideFareCalculationStrategy;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.RideRequest;
+import com.KartikeySingh.project.UberApp.Uber_Cl.strategies.RideFareCalculationStrategy;
 import com.KartikeySingh.project.UberApp.Uber_Cl.services.DistanceService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

@@ -1,6 +1,6 @@
-package com.KartikeySingh.project.UberApp.Uber_Cl.Strategies;
+package com.KartikeySingh.project.UberApp.Uber_Cl.strategies;
 
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.RideRequest;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.RideRequest;
 
 public interface RideFareCalculationStrategy {
 

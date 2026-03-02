@@ -1,8 +1,10 @@
-package com.KartikeySingh.project.UberApp.Uber_Cl.Entities;
+package com.KartikeySingh.project.UberApp.Uber_Cl.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
 import org.locationtech.jts.geom.Point;
+
+import java.io.Serializable;
 
 @Entity
 @Builder
@@ -12,19 +14,18 @@ import org.locationtech.jts.geom.Point;
 @Table(indexes = {
         @Index( name = "idx_driver_vehicle_id", columnList = "vehicleId")
 })
-public class Driver {
+public class Driver implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @OneToOne
-    @JoinColumn(name="user_id") //--->The @JoinColumn annotation in JPA (Java Persistence API) is used to specify the foreign key column when defining a relationship between two entities in a relational database. It is commonly used with @OneToOne, @ManyToOne, and @OneToMany associations.
-    private User user;
+    @JoinColumn(name = "user_id")
     private Double rating;
 
     private Boolean available;
 
     private String vehicleId;
+    private User user;
 
     @Column(columnDefinition = "Geometry(Point,4326)")
-    Point currentLocation;  //--->Spring Boot me Point ka use latitude aur longitude (GPS location) store karne ke liye hota hai. Agar aap kisi driver, delivery agent, ya kisi user ka current location store karna chahte ho, to Point type ka use kar sakte ho.
+    Point currentLocation;
 }

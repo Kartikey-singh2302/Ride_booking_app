@@ -1,8 +1,8 @@
 package com.KartikeySingh.project.UberApp.Uber_Cl.services;
 
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.Ride;
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.Rider;
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.User;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.Ride;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.Rider;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.User;
 import com.KartikeySingh.project.UberApp.Uber_Cl.dto.DriverDTO;
 import com.KartikeySingh.project.UberApp.Uber_Cl.dto.RideDTO;
 import com.KartikeySingh.project.UberApp.Uber_Cl.dto.RideRequestDTO;

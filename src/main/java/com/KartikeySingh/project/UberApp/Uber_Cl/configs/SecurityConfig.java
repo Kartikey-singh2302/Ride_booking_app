@@ -8,6 +8,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Configuration
+
 public class SecurityConfig {
 
     @Bean
@@ -15,8 +16,8 @@ public class SecurityConfig {
     {
         return new BCryptPasswordEncoder();
     }
-
     @Bean
+
     AuthenticationManager authenticationManager(AuthenticationConfiguration configuration) throws Exception {
         return configuration.getAuthenticationManager();
     }

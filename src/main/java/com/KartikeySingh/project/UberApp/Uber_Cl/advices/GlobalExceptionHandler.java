@@ -1,5 +1,6 @@
 package com.KartikeySingh.project.UberApp.Uber_Cl.advices;
 
+import com.KartikeySingh.project.UberApp.Uber_Cl.exceptions.ResourceNotFoundException;
 import com.KartikeySingh.project.UberApp.Uber_Cl.exceptions.RuntimeConflictExceptions;
 import io.jsonwebtoken.JwtException;
 import org.springframework.boot.context.config.ConfigDataResourceNotFoundException;
@@ -8,23 +9,22 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-
 import javax.naming.AuthenticationException;
 import java.nio.file.AccessDeniedException;
 import java.util.List;
 import java.util.stream.Collectors;
 @RestControllerAdvice
+
 public class GlobalExceptionHandler {
 
-    public ResponseEntity<ApiResponse<?>> handleResourceNotFound
-            (ConfigDataResourceNotFoundException exception)
-    {
-            ApiError apiError = ApiError.builder()
-                    .status(HttpStatus.NOT_FOUND)
-                    .message(exception.getMessage())
-                    .build();
-        return buildErrorResponseEntity(apiError);
-    }
+   @ExceptionHandler(ResourceNotFoundException.class)
+    public ResponseEntity<ApiResponse<?>> handleResourceNotFound(ResourceNotFoundException exception) {
+       ApiError apiError = ApiError.builder()
+               .status(HttpStatus.NOT_FOUND)
+               .message(exception.getMessage())
+               .build();
+       return buildErrorResponseEntity(apiError);
+   }
 
     private ResponseEntity<ApiResponse<?>> buildErrorResponseEntity(ApiError apiError) {
         return null;
@@ -80,13 +80,13 @@ public class GlobalExceptionHandler {
             return buildErrorResponseEntity(apiError);
         }
 
-
+//validation fail exception
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<ApiResponse<?>> handleRuntimeConflictException(MethodArgumentNotValidException exception) {
         List<String> errors = exception
-                .getBindingResult() // BindingResult
-                .getAllErrors() // List<ObjectError>
-                .stream() // Stream<ObjectError>
+                .getBindingResult()
+                .getAllErrors()
+                .stream()
                 .map(error -> error.getDefaultMessage()) // Stream<String>
                 .collect(Collectors.toList());
 
@@ -97,4 +97,5 @@ public class GlobalExceptionHandler {
                 .build();
         return buildErrorResponseEntity(apiError);
    }
+
 }

@@ -1,10 +1,10 @@
 package com.KartikeySingh.project.UberApp.Uber_Cl.services.impl;
 
 
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.Driver;
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.User;
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.enums.Role;
-import com.KartikeySingh.project.UberApp.Uber_Cl.Security.JWTService;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.Driver;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.User;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.enums.Role;
+import com.KartikeySingh.project.UberApp.Uber_Cl.security.JWTService;
 import com.KartikeySingh.project.UberApp.Uber_Cl.dto.DriverDTO;
 import com.KartikeySingh.project.UberApp.Uber_Cl.dto.SignupDTO;
 import com.KartikeySingh.project.UberApp.Uber_Cl.dto.UserDTO;
@@ -26,7 +26,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
-import static com.KartikeySingh.project.UberApp.Uber_Cl.Entities.enums.Role.DRIVER;
+import static com.KartikeySingh.project.UberApp.Uber_Cl.entities.enums.Role.DRIVER;
 
 @Service
 @RequiredArgsConstructor

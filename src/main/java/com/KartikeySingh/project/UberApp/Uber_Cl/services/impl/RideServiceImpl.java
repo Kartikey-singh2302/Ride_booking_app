@@ -1,12 +1,11 @@
 package com.KartikeySingh.project.UberApp.Uber_Cl.services.impl;
 
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.Driver;
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.Ride;
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.RideRequest;
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.Rider;
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.enums.RideRequestStatus;
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.enums.RideStatus;
-import com.KartikeySingh.project.UberApp.Uber_Cl.dto.RideRequestDTO;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.Driver;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.Ride;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.RideRequest;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.Rider;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.enums.RideRequestStatus;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.enums.RideStatus;
 import com.KartikeySingh.project.UberApp.Uber_Cl.repositories.RideRepository;
 import com.KartikeySingh.project.UberApp.Uber_Cl.services.RideRequestService;
 import com.KartikeySingh.project.UberApp.Uber_Cl.services.RideService;

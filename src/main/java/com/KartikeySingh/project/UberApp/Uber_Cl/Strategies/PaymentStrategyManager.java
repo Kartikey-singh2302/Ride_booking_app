@@ -1,13 +1,10 @@
-package com.KartikeySingh.project.UberApp.Uber_Cl.Strategies;
+package com.KartikeySingh.project.UberApp.Uber_Cl.strategies;
 
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.enums.PaymentMethod;
-import com.KartikeySingh.project.UberApp.Uber_Cl.Strategies.impl.CashPaymentStrategy;
-import com.KartikeySingh.project.UberApp.Uber_Cl.Strategies.impl.WalletPaymentStrategy;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.enums.PaymentMethod;
+import com.KartikeySingh.project.UberApp.Uber_Cl.strategies.impl.CashPaymentStrategy;
+import com.KartikeySingh.project.UberApp.Uber_Cl.strategies.impl.WalletPaymentStrategy;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
-
-import static com.KartikeySingh.project.UberApp.Uber_Cl.Entities.enums.PaymentMethod.CASH;
-import static com.KartikeySingh.project.UberApp.Uber_Cl.Entities.enums.PaymentMethod.WALLET;
 
 @Component
 @RequiredArgsConstructor

@@ -11,20 +11,18 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
 
 import java.util.List;
 import java.util.Objects;
-
 @RestControllerAdvice
 public class GlobalResponseHandler implements ResponseBodyAdvice<Object> {
 
-
-    public boolean supports(MethodParameter returnType, Class<? extends HttpMessageConverter<?>> converterType) {
+    public boolean supports(MethodParameter returnType, Class<?extends HttpMessageConverter<?>> converterType) {
         return true;
     }
 
    @Override
-
     public Object beforeBodyWrite(Object body, MethodParameter returnType, MediaType selectedContentType,
                                   Class<? extends HttpMessageConverter<?>> selectedConverterType,
-                                  org.springframework.http.server.ServerHttpRequest request, org.springframework.http.server.ServerHttpResponse response) {
+                                  org.springframework.http.server.ServerHttpRequest request,
+                                  org.springframework.http.server.ServerHttpResponse response) {
 
        List<String> allowedRoutes = List.of("/v3/api-docs", "/actuator");
 

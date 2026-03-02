@@ -1,14 +1,13 @@
-package com.KartikeySingh.project.UberApp.Uber_Cl.Entities;
+package com.KartikeySingh.project.UberApp.Uber_Cl.entities;
 
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.enums.PaymentMethod;
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.enums.RideRequestStatus;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.enums.PaymentMethod;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.enums.RideRequestStatus;
 import jakarta.persistence.*;
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.awt.*;
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 @Entity
@@ -16,9 +15,8 @@ import java.time.LocalDateTime;
 @Table(indexes = {
         @Index(name = "idx_ride_request_rider", columnList = "rider_id")
 })
-public class RideRequest {
+public class RideRequest implements Serializable {
     @Id
-
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 

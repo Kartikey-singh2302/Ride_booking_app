@@ -1,14 +1,9 @@
 package com.KartikeySingh.project.UberApp.Uber_Cl.dto;
 
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.Ride;
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.Wallet;
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.enums.TransactionMethod;
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.enums.TransactionType;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToOne;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.enums.TransactionMethod;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.enums.TransactionType;
 import lombok.Builder;
 import lombok.Data;
-import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
 @Data

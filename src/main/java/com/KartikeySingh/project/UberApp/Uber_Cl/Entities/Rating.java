@@ -1,10 +1,12 @@
-package com.KartikeySingh.project.UberApp.Uber_Cl.Entities;
+package com.KartikeySingh.project.UberApp.Uber_Cl.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.io.Serializable;
 
 @Builder
 @AllArgsConstructor
@@ -15,7 +17,7 @@ import lombok.NoArgsConstructor;
         @Index(name = "idx_rating_rider", columnList = "rider_id"),
         @Index(name = "idx_rating_driver", columnList = "driver_id")
 })
-public class Rating {
+public class Rating implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
@@ -29,6 +31,6 @@ public class Rating {
     @ManyToOne
     private Driver driver;
 
-    private Integer driverRating; // rating for the driver
-    private Integer riderRating; //rating for the rider
+    private Integer driverRating;
+    private Integer riderRating;
 }

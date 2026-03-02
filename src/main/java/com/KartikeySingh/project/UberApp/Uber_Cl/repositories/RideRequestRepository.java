@@ -1,6 +1,6 @@
 package com.KartikeySingh.project.UberApp.Uber_Cl.repositories;
 
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.RideRequest;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.RideRequest;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

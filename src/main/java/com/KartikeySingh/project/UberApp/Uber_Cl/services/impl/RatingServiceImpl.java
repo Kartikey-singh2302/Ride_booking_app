@@ -1,9 +1,9 @@
 package com.KartikeySingh.project.UberApp.Uber_Cl.services.impl;
 
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.Driver;
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.Rating;
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.Ride;
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.Rider;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.Driver;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.Rating;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.Ride;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.Rider;
 import com.KartikeySingh.project.UberApp.Uber_Cl.dto.DriverDTO;
 import com.KartikeySingh.project.UberApp.Uber_Cl.dto.RiderDTO;
 import com.KartikeySingh.project.UberApp.Uber_Cl.exceptions.ResourceNotFoundException;
@@ -43,8 +43,9 @@ public class RatingServiceImpl implements RatingService {
                 .average().orElse(0.0);
         driver.setRating(newRating);
 
-       Driver savedDriver =  driverRepository.save(driver);
-       return modelMapper.map(savedDriver,DriverDTO.class);
+       Driver savedDriver =  driverRepository.save(driver);//Jo driver object hmne pass kiya, uska data database me save (insert/update) ho jayega.
+        //Aur jo jo updated entity database ne return ki, wo savedDriver variable me store ho jayegi.
+       return modelMapper.map(savedDriver,DriverDTO.class);//modelmapper ko convert krne k liye  bhi use krte h
     }
 
     @Override
@@ -54,9 +55,6 @@ public class RatingServiceImpl implements RatingService {
                 (()->new ResourceNotFoundException("Rating not found for ride with id:"+ride.getId()));
         if(ratingObj.getRiderRating()!=null)
             throw new RuntimeException("Rider has already been rated, cannot rate again");
-
-        ratingObj.setDriverRating(rating);
-        ratingRepository.save(ratingObj);
 
         ratingObj.setDriverRating(rating);
         ratingRepository.save(ratingObj);

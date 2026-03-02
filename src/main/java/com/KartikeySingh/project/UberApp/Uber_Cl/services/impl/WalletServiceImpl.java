@@ -1,14 +1,11 @@
 package com.KartikeySingh.project.UberApp.Uber_Cl.services.impl;
 
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.Ride;
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.User;
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.Wallet;
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.WalletTransaction;
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.enums.TransactionMethod;
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.enums.TransactionType;
-import com.KartikeySingh.project.UberApp.Uber_Cl.dto.RideDTO;
-import com.KartikeySingh.project.UberApp.Uber_Cl.dto.WalletDTO;
-import com.KartikeySingh.project.UberApp.Uber_Cl.dto.WalletTransactionDTO;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.Ride;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.User;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.Wallet;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.WalletTransaction;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.enums.TransactionMethod;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.enums.TransactionType;
 import com.KartikeySingh.project.UberApp.Uber_Cl.exceptions.ResourceNotFoundException;
 import com.KartikeySingh.project.UberApp.Uber_Cl.repositories.WalletRepository;
 import com.KartikeySingh.project.UberApp.Uber_Cl.services.WalletService;

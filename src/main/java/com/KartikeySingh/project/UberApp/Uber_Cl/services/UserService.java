@@ -1,6 +1,6 @@
 package com.KartikeySingh.project.UberApp.Uber_Cl.services;
 
-import com.KartikeySingh.project.UberApp.Uber_Cl.Entities.User;
+import com.KartikeySingh.project.UberApp.Uber_Cl.entities.User;
 import com.KartikeySingh.project.UberApp.Uber_Cl.exceptions.ResourceNotFoundException;
 import com.KartikeySingh.project.UberApp.Uber_Cl.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
