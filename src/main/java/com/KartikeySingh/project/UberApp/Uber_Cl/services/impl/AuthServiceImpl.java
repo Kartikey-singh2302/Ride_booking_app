@@ -23,6 +23,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.Set;
 
@@ -51,12 +52,11 @@ public class AuthServiceImpl implements AuthService {
 
     @Override
         public String[] login(String email, String password) {
-            String tokens[] = new String[2];
            Authentication authentication  = authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(email, password)
             );
 
-           User user = (User) authentication.getPrincipal();
+           User user = (User) authentication.getPrincipal(); //loggedIn user
 
            String accessToken = jwtService.generateAccessToken(user);
            String refreshToken = jwtService.generateRefreshToken(user);
@@ -66,9 +66,10 @@ public class AuthServiceImpl implements AuthService {
 
         @Override
         @Transactional
-        public UserDTO signup(SignupDTO signupDTO) {
+        public UserDTO signup(@RequestBody SignupDTO signupDTO) {
             User user = userRepository.findByEmail(signupDTO.getEmail()).orElse(null);
             if(user != null)
+
                 throw new RuntimeConflictExceptions("Cannot signup, User already exists with email "+signupDTO.getEmail());
 
             User mappedUser = modelMapper.map(signupDTO, User.class);

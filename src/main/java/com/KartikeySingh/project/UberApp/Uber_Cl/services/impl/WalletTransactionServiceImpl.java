@@ -15,13 +15,7 @@ public class WalletTransactionServiceImpl implements WalletTransactionService {
     private final ModelMapper modelMapper;
     @Override
     public void CreateNewWalletTransaction(WalletTransaction walletTransaction) {
-        // *****imp**padho-*
 
-        // walletTransactionDTO ek "request DTO" hai jo client se data lekar aaya hai,
-        // jisko hume database me store karne ke liye WalletTransaction type me convert karna padta hai,
-        // jo ek entity class hai.
-        // Aur jo walletTransaction(left side wala) object banega, wahi entity ka object
-        // hai jo database me column banega.
         walletTransactionRepository.save(walletTransaction);
 
     }

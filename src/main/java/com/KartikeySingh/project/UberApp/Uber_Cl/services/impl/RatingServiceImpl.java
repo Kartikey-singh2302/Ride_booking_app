@@ -43,9 +43,8 @@ public class RatingServiceImpl implements RatingService {
                 .average().orElse(0.0);
         driver.setRating(newRating);
 
-       Driver savedDriver =  driverRepository.save(driver);//Jo driver object hmne pass kiya, uska data database me save (insert/update) ho jayega.
-        //Aur jo jo updated entity database ne return ki, wo savedDriver variable me store ho jayegi.
-       return modelMapper.map(savedDriver,DriverDTO.class);//modelmapper ko convert krne k liye  bhi use krte h
+       Driver savedDriver =  driverRepository.save(driver);
+       return modelMapper.map(savedDriver,DriverDTO.class);
     }
 
     @Override

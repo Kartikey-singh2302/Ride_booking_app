@@ -57,17 +57,12 @@ public class WalletServiceImpl implements WalletService {
                 .amount(amount)
                 .build();
 
-        //walletTransactionService.CreateNewWalletTransaction(walletTransaction);
 
         wallet.getTransaction().add(walletTransaction);
         return walletRepository.save(wallet);
     }
 
 
-    @Override
-    public void withdrawAllMyMoneyFromWallet() {
-
-    }
 
     @Override
     public Wallet findWalletById(Long walletId) {

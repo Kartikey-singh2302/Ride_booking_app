@@ -18,14 +18,13 @@ import org.springframework.web.servlet.HandlerExceptionResolver;
 @RequiredArgsConstructor
 public class JWTAuthFilter extends OncePerRequestFilter {
 
-        private final JWTService jwtService;// token verify krne k liye
-        private final UserService userService;// DB se user fetch krne k liye
-        @Autowired // ye yha isliye h kyuki @RequiredArgsConstructor kewal final wale ya fir @Nonnull ko hi inject krta h it is for handlerexception
-                     //👇 ka kaam hai “agar controller ya service me exception aaye, to decide karna ki client ko kya response bhejna hai”
+        private final JWTService jwtService;
+        private final UserService userService;
+        @Autowired
         @Qualifier("handlerExceptionResolver")
         private HandlerExceptionResolver handlerExceptionResolver;
 
-        @Override      //👇 ye khud ek inbuilt method nahi hai, lekin iska definition OncePerRequestFilter me already hai as abstract method.
+        @Override
         protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) {
             try {
                 final String requestTokenHeader = request.getHeader("Authorization");
@@ -59,18 +58,5 @@ public class JWTAuthFilter extends OncePerRequestFilter {
         }
     }
 
-//        doFilterInternal  har request ke liye “check krta h jo bhi filters usme define kroge which could be
-//        JWT validation,Logging,Exception handling, Response decide karna sab likha ja sakta hai.
-//Jo bhi custom logic aap doFilterInternal me likhte ho, wo har request pe execute hoga.
-//
-//Agar aapka logic detect kare ki koi condition fail ho gayi (jaise authentication error,
-//invalid token, ya koi custom check) → tab aap custom response return kar sakte ho aur request
-// aage controller tak nahi jaayegi.
-//Agar sab sahi ho → aap filterChain.doFilter(request, response) call karte ho, aur
-// request normal flow me controller → service → response tak jata hai.
-//
-//
-//
-//
-//
+
 

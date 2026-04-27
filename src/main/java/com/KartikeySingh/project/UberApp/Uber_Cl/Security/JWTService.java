@@ -28,7 +28,7 @@ public class JWTService {
                 .issuedAt(new Date())
                 .expiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60 * 10)) // 10 hours
                 .signWith(getSecretKey())
-                .compact(); // object ko jwt string me convert kr deta h
+                .compact();
     }
 
     public String generateRefreshToken(User user) {

@@ -26,6 +26,6 @@ public class Driver implements Serializable {
     private String vehicleId;
     private User user;
 
-    @Column(columnDefinition = "Geometry(Point,4326)")
+    @Column(columnDefinition = "Geometry(Point,4326)")//spatial refernce id (earth standard)
     Point currentLocation;
 }
