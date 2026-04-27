@@ -18,7 +18,13 @@ public class Driver implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+<<<<<<< HEAD
     @JoinColumn(name = "user_id")
+=======
+    @OneToOne
+    @JoinColumn(name="user_id")
+    private User user;
+>>>>>>> origin/master
     private Double rating;
 
     private Boolean available;
@@ -26,6 +32,10 @@ public class Driver implements Serializable {
     private String vehicleId;
     private User user;
 
+<<<<<<< HEAD
     @Column(columnDefinition = "Geometry(Point,4326)")//spatial refernce id (earth standard)
+=======
+    @Column(columnDefinition = "Geometry(Point,4326)")
+>>>>>>> origin/master
     Point currentLocation;
 }

@@ -5,7 +5,6 @@ import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
 @Data
-//lat long k liye h
 public class PointDTO {
     private double[] coordinates;
     private String type ="Point";
@@ -23,9 +22,4 @@ public class PointDTO {
     public String getY() {
     return null;
     }
-
-
-
-
-
 }

@@ -11,8 +11,6 @@ import com.KartikeySingh.project.UberApp.Uber_Cl.services.WalletService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-//rider ->100
-//driver->70 deduct 30rs from the driver's wallet
 @Service
 @RequiredArgsConstructor
 public class CashPaymentStrategy implements PaymentStrategy {
@@ -32,6 +30,9 @@ private final PaymentRepository paymentRepository;
         paymentRepository.save(payment);
     }
 }
+<<<<<<< HEAD
 //10 rating count =4.0
 //new rating 4.6
 //new rating 4.6/11=4.05
+=======
+>>>>>>> origin/master
