@@ -30,9 +30,8 @@ private final PaymentRepository paymentRepository;
         paymentRepository.save(payment);
     }
 }
-<<<<<<< HEAD
+
 //10 rating count =4.0
 //new rating 4.6
 //new rating 4.6/11=4.05
-=======
->>>>>>> origin/master
+
